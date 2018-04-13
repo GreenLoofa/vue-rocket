@@ -28,13 +28,13 @@ fn files(file: PathBuf) -> Option<NamedFile> {
 
 #[derive(Serialize, Debug)]
 struct Test {
-    x: &'static str
+    message: &'static str
 }
 
-#[get("/test")]
-fn test() -> String {
-    let test = Test { x: "hello world" };
-    serde_json::to_string(&test).unwrap()
+#[get("/hello")]
+fn hello() -> String {
+    let hello_message = Test { message: "hello world" };
+    serde_json::to_string(&hello_message).unwrap()
 }
 
 fn main() {
@@ -50,7 +50,7 @@ fn main() {
     };
 
     rocket::ignite()
-        .mount("/", routes![index, files, test])
+        .mount("/", routes![index, files, hello])
         .attach(options)
         .launch();
 }
