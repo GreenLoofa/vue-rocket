@@ -2,3 +2,4 @@
 /target
 **/*.rs.bk
 /vue-rocket/node_modules
+/Cargo.lock
