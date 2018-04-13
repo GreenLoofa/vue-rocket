@@ -2,26 +2,49 @@
 
 > A Vue.js + Rocket project
 
-## Build Setup
+## Build Setup for Production
 
 ``` bash
-# install dependencies
-npm install
+# cd to the Vue portion of the project
+cd vue
 
-# serve with hot reload at localhost:8080
-npm run dev
+# install dependencies
+yarn install
 
 # build for production with minification
-npm run build
+yarn run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+cd ..
 
-# run unit tests
-npm run unit
+# Rocket requires the nightly version
+rustup override set nightly
 
-# run all tests
-npm test
+cargo run
+
+```
+
+## Build Setup for Development
+
+``` bash
+
+# In one terminal window, do:
+cd vue
+yarn install
+yarn run dev
+
+> Your application is running here: http://localhost:8080
+
+# In another terminal window, do:
+cargo run
+
+> 🚀  Rocket has launched from http://localhost:8000
+
+# From vue, make axios calls / requests to http://localhost:8000
+# From your browser, navigate to http://localhost:8080
+
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## TODO
+- [ ] Build a development version of Vue served by rocket (with hot reload)
