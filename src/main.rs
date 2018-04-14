@@ -18,12 +18,12 @@ use std::path::{Path, PathBuf};
 
 #[get("/")]
 fn index() -> io::Result<NamedFile> {
-    NamedFile::open("vue-rocket/dist/index.html")
+    NamedFile::open("vue/dist/index.html")
 }
 
 #[get("/<file..>")]
 fn files(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("vue-rocket/dist/").join(file)).ok()
+    NamedFile::open(Path::new("vue/dist/").join(file)).ok()
 }
 
 #[derive(Serialize, Debug)]
