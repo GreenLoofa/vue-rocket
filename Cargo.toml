@@ -1,12 +1,12 @@
 [package]
 name = "vue-rocket"
 version = "0.1.0"
-authors = ["DiscreetProtein <jordan@clearbluetechnologies.com>"]
+authors = ["GreenLoofa <jordan@clearbluetechnologies.com>"]
 
 [dependencies]
-rocket = "0.4.1"
-rocket_codegen = "0.4.1"
-serde = "1.0.37"
-serde_derive = "1.0.37"
-serde_json = "1.0.13"
+rocket = "0.4.2"
+rocket_codegen = "0.4.2"
+serde = "1.0.99"
+serde_derive = "1.0.99"
+serde_json = "1.0.40"
 rocket_cors = "0.4.0"
