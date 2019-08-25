@@ -9,7 +9,7 @@
 cd vue
 
 # install dependencies
-yarn install
+yarn install --ignore-engines
 
 # build for production with minification
 yarn run build
@@ -29,10 +29,10 @@ cargo run
 
 # In one terminal window, do:
 cd vue
-yarn install
+yarn install --ignore-engines
 yarn run dev
 
-> Your application is running here: http://localhost:8080
+> Your application is running here: http://localhost:8081
 
 # In another terminal window, do:
 cargo run

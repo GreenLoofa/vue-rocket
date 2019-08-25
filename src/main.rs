@@ -42,7 +42,7 @@ fn hello() -> String {
 }
 
 fn main() {
-    let (allowed_origins, failed_origins) = AllowedOrigins::some(&["http://localhost:8000", "http://localhost:8080"]);
+    let (allowed_origins, failed_origins) = AllowedOrigins::some(&["http://localhost:8000", "http://localhost:8081"]);
     assert!(failed_origins.is_empty());
 
     let options = rocket_cors::Cors {
