@@ -45,7 +45,7 @@
     "postcss-url": "^8.0.0",
     "rimraf": "^3.0.0",
     "semver": "^6.3.0",
-    "shelljs": "^0.8.3",
+    "shelljs": "^0.8.5",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.1.0",
     "vue-loader": "^15.7.1",
